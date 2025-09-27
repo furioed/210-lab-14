@@ -10,12 +10,12 @@ const int WIDTH = 3; // Field width for printing
 
 class Color {
 private:
-    int red;
-    int green;
-    int blue;
+    int red;    // Red component (0-255)
+    int green;  // Green component (0-255)
+    int blue;   // Blue component (0-255)
 
 public:
-    // Constructor: initializes color components with validation
+    // Constructor with default values and validation
     Color(int r = 0, int g = 0, int b = 0) {
         setRed(r);
         setGreen(g);
@@ -27,7 +27,7 @@ public:
     int getGreen() const { return green; }
     int getBlue() const { return blue; }
 
-    // Setters for red, green, blue with validation
+    // Setters with validation
     void setRed(int r) { red = (r >= 0 && r <= 255) ? r : 0; }
     void setGreen(int g) { green = (g >= 0 && g <= 255) ? g : 0; }
     void setBlue(int b) { blue = (b >= 0 && b <= 255) ? b : 0; }
@@ -41,14 +41,17 @@ public:
 };
 
 int main() {
-    // Single red color
+    // Create Color objects
     Color redColor(255, 0, 0);
+    Color greenColor(0, 255, 0);
 
-    // Print header for table
+    // Print table header
     cout << "Red   Green   Blue\n";
     cout << "-------------------\n";
 
+    // Print the RGB values using the object's print method
     redColor.print();
+    greenColor.print();
 
     return 0;
 }
