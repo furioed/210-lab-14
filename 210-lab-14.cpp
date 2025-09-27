@@ -45,6 +45,7 @@ int main() {
     Color redColor(255, 0, 0);
     Color greenColor(0, 255, 0);
     Color blueColor(0, 0, 255);
+    Color grayColor(128, 128, 128);
 
     // Print table header
     cout << "Red   Green   Blue\n";
@@ -54,6 +55,12 @@ int main() {
     redColor.print();
     greenColor.print();
     blueColor.print();
+
+    // Separate the gray color with a line
+    cout << " \n";
+    cout << "Custom Color (gray):\n";
+    cout << "-------------------\n";
+    grayColor.print();
 
     return 0;
 }
