@@ -44,6 +44,7 @@ int main() {
     // Create Color objects
     Color redColor(255, 0, 0);
     Color greenColor(0, 255, 0);
+    Color blueColor(0, 0, 255);
 
     // Print table header
     cout << "Red   Green   Blue\n";
@@ -52,6 +53,7 @@ int main() {
     // Print the RGB values using the object's print method
     redColor.print();
     greenColor.print();
+    blueColor.print();
 
     return 0;
 }
